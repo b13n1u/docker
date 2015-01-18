@@ -5,7 +5,7 @@ FROM java:openjdk-7-jre
 MAINTAINER b13n1u <b13n1u@gmail.com>
 
 
-ENV LS_VERSION 1.4.2
+ENV LS_VERSION 1.4.1
 ENV LS_PATH /logstash
 ENV LS_CONF_DIR /logstash/config
 
