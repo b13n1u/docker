@@ -24,6 +24,6 @@ ADD logstash.conf /logstash/logstash.conf
 EXPOSE 514 9292
 
 
-ENTRYPOINT ["$LS_PATH/bin/logstash"]
+ENTRYPOINT ["/logstash/bin/logstash"]
 CMD [ "--help"]
 
