@@ -7,7 +7,6 @@ MAINTAINER b13n1u <b13n1u@gmail.com>
 
 ENV LS_VERSION 1.4.2
 ENV LS_PATH /logstash
-ENV LS_CONF_DIR /logstash/config
 
 
 RUN wget -q https://download.elasticsearch.org/logstash/logstash/logstash-$LS_VERSION.tar.gz -O - | tar zxvf - && \
@@ -15,10 +14,10 @@ RUN wget -q https://download.elasticsearch.org/logstash/logstash/logstash-$LS_VE
 
 
 #install contrib
-RUN $LS_PATH/bin/plugin install contrib
+RUN /logstash/bin/plugin install contrib
 
 #example configuration file
-ADD logstash.conf $LS_CONF_DIR/logstash.conf
+ADD logstash.conf /logstash/logstash.conf
 
 
 #default syslog, kibana
